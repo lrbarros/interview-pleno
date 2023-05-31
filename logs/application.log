@@ -1,0 +1,151 @@
+[32m[INFO ][m [35m[2023-05-30T21:47:04,992] [background-preinit] [Version][m HV000001: Hibernate Validator 6.2.3.Final 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,020] [main] [Application][m Starting Application using Java 17.0.6 on luiz-IdeaPad-3-15ALC6 with PID 14018 (/home/luiz/b2b/interview-pleno-gubee (2)/interview-pleno/core/target/classes started by luiz in /home/luiz/b2b/interview-pleno-gubee (2)/interview-pleno) 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,024] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,360] [main] [RepositoryConfigurationDelegate][m Multiple Spring Data modules found, entering strict repository configuration mode! 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,360] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,403] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces. 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,543] [main] [RepositoryConfigurationDelegate][m Multiple Spring Data modules found, entering strict repository configuration mode! 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,543] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,547] [main] [RepositoryConfigurationExtensionSupport][m Spring Data JDBC - Could not safely identify store assignment for repository candidate interface br.com.gubee.interview.core.features.hero.HeroRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table. 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,548] [main] [RepositoryConfigurationExtensionSupport][m Spring Data JDBC - Could not safely identify store assignment for repository candidate interface br.com.gubee.interview.core.features.powerstats.PowerStatsRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table. 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,548] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,953] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,961] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,961] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,962] [main] [StandardService][m Starting service [Tomcat] 
+[32m[INFO ][m [35m[2023-05-30T21:47:05,962] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,027] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,028] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 967 ms 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,141] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,275] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,290] [main] [VersionPrinter][m Flyway Community Edition 8.0.5 by Redgate 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,291] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[33m[WARN ][m [35m[2023-05-30T21:47:06,302] [main] [Database][m Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,389] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.017s) 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,397] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,399] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,469] [main] [LogHelper][m HHH000204: Processing PersistenceUnitInfo [name: default] 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,513] [main] [Version][m HHH000412: Hibernate ORM core version 5.6.8.Final 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,646] [main] [Version][m HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+[32m[INFO ][m [35m[2023-05-30T21:47:06,737] [main] [Dialect][m HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect 
+[32m[INFO ][m [35m[2023-05-30T21:47:07,142] [main] [JtaPlatformInitiator][m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+[32m[INFO ][m [35m[2023-05-30T21:47:07,148] [main] [LocalContainerEntityManagerFactoryBean][m Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[33m[WARN ][m [35m[2023-05-30T21:47:07,482] [main] [JpaBaseConfiguration$JpaWebConfiguration][m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+[32m[INFO ][m [35m[2023-05-30T21:47:07,735] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2023-05-30T21:47:07,746] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
+[32m[INFO ][m [35m[2023-05-30T21:47:07,754] [main] [Application][m Started Application in 2.995 seconds (JVM running for 3.792) 
+[32m[INFO ][m [35m[2023-05-30T21:48:01,191] [http-nio-8080-exec-2] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2023-05-30T21:48:01,191] [http-nio-8080-exec-2] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2023-05-30T21:48:01,194] [http-nio-8080-exec-2] [DispatcherServlet][m Completed initialization in 3 ms 
+[33m[WARN ][m [35m[2023-05-30T21:48:10,873] [http-nio-8080-exec-4] [SqlExceptionHelper][m SQL Error: 0, SQLState: 42883 
+[1;31m[ERROR][m [35m[2023-05-30T21:48:10,874] [http-nio-8080-exec-4] [SqlExceptionHelper][m ERROR: function lower(bytea) does not exist
+  Dica: No function matches the given name and argument types. You might need to add explicit type casts.
+  Posição: 265 
+[1;31m[ERROR][m [35m[2023-05-30T21:48:10,879] [http-nio-8080-exec-4] [[dispatcherServlet]][m Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause 
+org.postgresql.util.PSQLException: ERROR: function lower(bytea) does not exist
+  Dica: No function matches the given name and argument types. You might need to add explicit type casts.
+  Posição: 265
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:167) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:119) ~[postgresql-42.3.4.jar:42.3.4]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2322) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2075) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2037) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:956) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2868) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2850) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2682) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2677) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1459) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.6.8.Final.jar:5.6.8.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:128) ~[spring-data-jpa-2.6.4.jar:2.6.4]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90) ~[spring-data-jpa-2.6.4.jar:2.6.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:155) ~[spring-data-jpa-2.6.4.jar:2.6.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:143) ~[spring-data-jpa-2.6.4.jar:2.6.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.6.4.jar:2.6.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.6.4.jar:2.6.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:159) ~[spring-data-commons-2.6.4.jar:2.6.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.6.4.jar:2.6.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.6.4.jar:2.6.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.6.4.jar:2.6.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.19.jar:5.3.19]
+	at jdk.proxy2.$Proxy151.findFirstByNameLikeIgnoreCase(Unknown Source) ~[?:?]
+	at br.com.gubee.interview.core.features.hero.HeroService.findByFilter(HeroService.java:26) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.HeroController.findByFilter(HeroController.java:20) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[32m[INFO ][m [35m[2023-05-30T21:50:49,904] [SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean][m Closing JPA EntityManagerFactory for persistence unit 'default' 
+[32m[INFO ][m [35m[2023-05-30T21:50:49,906] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2023-05-30T21:50:49,911] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
