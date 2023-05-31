@@ -31,7 +31,7 @@ public class Hero {
     @Enumerated(EnumType.STRING)
     private RaceEnum race;
 
-    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST)
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinColumn(name = "power_stats_id",nullable = false)
     @JsonProperty(value = "power_stats")
     private PowerStats powerStats;

@@ -4,6 +4,7 @@ import br.com.gubee.interview.model.Hero;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -42,13 +43,11 @@ public class HeroController {
     }
     @PutMapping
     public ResponseEntity<?>updateHero( @RequestBody Hero hero){
-
-        return  ResponseEntity.ok("test");
-    }
-    @PatchMapping
-    public ResponseEntity<?>updateAnyParamHero(@Valid @RequestBody Hero hero){
-
-        return  ResponseEntity.ok("test");
+        Hero heroUpdated = heroService.update(hero);
+        if(ObjectUtils.isEmpty(heroUpdated)){
+            return ResponseEntity.notFound().build();
+        }
+        return  ResponseEntity.ok(heroUpdated);
     }
 
     @DeleteMapping("/{id}")
