@@ -27,7 +27,7 @@ public class HeroService {
     @Autowired private PowerStatsService powerStatsService;
     @Autowired private HeroRepository heroRepository;
     public Hero findByFilter(Filter filter) {
-        return heroRepository.findFirstByNameLikeIgnoreCase(filter.getName()).stream().findFirst().orElse(null);
+        return heroRepository.findFirstByNameLikeIgnoreCase(filter);
     }
 
     public Hero findById(UUID id) {
@@ -42,6 +42,7 @@ public class HeroService {
             validateHero(hero);
             return heroRepository.save(hero);
         }else{
+            hero.setId(heroDB.getId());
            return update(hero);
         }
     }
