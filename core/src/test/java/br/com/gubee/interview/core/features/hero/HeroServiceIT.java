@@ -13,7 +13,7 @@ import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.UUID;
 
-//@ActiveProfiles("it")
+@ActiveProfiles("it")
 @SpringBootTest
 public class HeroServiceIT {
 
@@ -21,7 +21,7 @@ public class HeroServiceIT {
     private HeroService heroService;
 
     @Test
-    public void cadastrarHeroiComSucesso(){
+    public void deveriaCadastrarHeroiComSucesso(){
 
         Hero hero  = new Hero();
         hero.setName("SuperMan");
