@@ -3,7 +3,6 @@ package br.com.gubee.interview.core.features.hero;
 import br.com.gubee.interview.enums.RaceEnum;
 import br.com.gubee.interview.model.Hero;
 import br.com.gubee.interview.model.PowerStats;
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,21 +21,25 @@ public class HeroServiceIT {
 
     @Test
     public void deveriaCadastrarHeroiComSucesso(){
+        try {
+            Hero hero  = new Hero();
+            hero.setName("SuperMan");
+            hero.setRace(RaceEnum.HUMAN);
 
-        Hero hero  = new Hero();
-        hero.setName("SuperMan");
-        hero.setRace(RaceEnum.HUMAN);
+            PowerStats powerStats = new PowerStats();
+            powerStats.setStrength((short) 100);
+            powerStats.setAgility((short) 95);
+            powerStats.setDexterity((short) 90);
+            powerStats.setIntelligence((short)70);
 
-        PowerStats powerStats = new PowerStats();
-        powerStats.setStrength((short) 100);
-        powerStats.setAgility((short) 95);
-        powerStats.setDexterity((short) 90);
-        powerStats.setIntelligence((short)70);
+            hero.setPowerStats(powerStats);
+            hero = heroService.create(hero);
+            Assertions.assertNotNull(hero.getId() );
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
-        hero.setPowerStats(powerStats);
-        hero = heroService.create(hero);
 
-        Assertions.assertNotNull(hero.getId() );
     }
     @Test
     public void deveriaDispararExceptionCadastrarHeroiSemPowerStats(){
@@ -46,7 +49,7 @@ public class HeroServiceIT {
         try{
             heroService.create(hero);
             Assertions.fail();
-        }catch (HttpClientErrorException e){
+        }catch (Exception e){
             Assertions.assertEquals(e.getMessage(),"400 PowerStats is required");
 
         }
