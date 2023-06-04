@@ -19,8 +19,8 @@ Ah, o Alfred (acho que ele é tipo um mordono do Sr. Wayne) começou o projeto p
 - [x] Criar endpoint de busca de heróis e seus atributos por filtro, nesse caso o filtro será apenas o nome. ***Caso não encontre nenhum herói o sistema deve retornar um sucesso 200 com o body vazio***;
 - [x] Criar endpoint de atualização de heróis, todos os campos poderão ser atualizados. ***Caso não encontre o herói o sistema deve retornar um erro 404 (Not Found)***;
 - [x] Criar endpoint de exclusão de heróis. A exclusão será física, ok? (Física?! É, deleta o registro da base). ***Caso não encontre o herói o sistema deve retornar um erro 404 (Not Found)***;
-- [] Criar testes unitários e de integração das funcionalidades desenvolvidas. ***As classes de teste unitário terminam com o prefixo `Test.java` e as classes de teste de integração terminam com `IT.java`. Temos um modelo de classe de exemplo dentro do projeto***; 
-- [] Criar um `docker-compose.yml` funcional para execução da aplicação. (Banco de Dados + API).
+- [x] Criar testes unitários e de integração das funcionalidades desenvolvidas. ***As classes de teste unitário terminam com o prefixo `Test.java` e as classes de teste de integração terminam com `IT.java`. Temos um modelo de classe de exemplo dentro do projeto***; 
+- [x] Criar um `docker-compose.yml` funcional para execução da aplicação. (Banco de Dados + API).
 
 Ah, tem algo mais! O Sr. Wayne nos pediu para criar um endpoint onde ele possa selecionar dois heróis e comparar seus atributos força, agilidade, destreza e inteligência. Como resultado, o sistema deve retornar um objeto contendo os id's e a diferença dos atributos (positivo se maior, negativo se menor) de cada herói. Dá uma pensada em como vai ficar esse objeto e o caminho do endpoint, tudo bem?
 <p>
@@ -51,7 +51,7 @@ mvn clean verify
 Será considerado um plus os candidatos que entregarem:
 - Bom uso dos padrões de REST;
 - Refatorar para Arquitetura Hexagonal/Clean Arch
-- Uso de BDD para escrever os testes de integração;
+- Uso de BDD para _escrever os testes de integração;_
 - Redundância e Escalabilidade da API:
     - Mínimo de 2 instâncias;
     - Balanceamento de carga usando alguma técnica de Round Robin;
