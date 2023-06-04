@@ -17,10 +17,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "hero")
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Hero {
     @Id
     @GeneratedValue
     @Column(columnDefinition = "uuid", updatable = false)
+    @EqualsAndHashCode.Include
     private UUID id;
 
     @Column(nullable = false, unique = true)

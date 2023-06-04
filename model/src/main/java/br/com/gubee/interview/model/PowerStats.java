@@ -13,10 +13,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "power_stats")
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class PowerStats {
     @Id
     @GeneratedValue
     @Column(columnDefinition = "uuid", updatable = false)
+    @EqualsAndHashCode.Include
     private UUID id;
 
     @Column(nullable = false)

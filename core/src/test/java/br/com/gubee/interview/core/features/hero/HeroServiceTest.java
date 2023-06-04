@@ -7,11 +7,17 @@ import br.com.gubee.interview.model.PowerStats;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 import org.mockito.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 
 public class HeroServiceTest {
 
+    @Mock
     private HeroService heroService;
     @Mock
     private HeroRepository heroRepository;
@@ -25,9 +31,16 @@ public class HeroServiceTest {
 
     @Test
     public void deveriaCriarHeroi(){
-        Hero h = hero();
+        Hero h = herois().get(0);
         try{
+            Mockito.when(heroService.findByFilter(new Filter(h.getName()))).thenReturn(null);
+
             heroService.create(h);
+
+            Mockito.verify(heroRepository).save(captor.capture());
+            Hero heroSaved = captor.getValue();
+
+            Assertions.assertDoesNotThrow(() -> Exception.class);
         }catch (Exception e){
             Assertions.fail();
         }
@@ -35,7 +48,7 @@ public class HeroServiceTest {
     }
     @Test
     public void deveriaLancarErroHeroiSemPowerStats(){
-        Hero h = hero();
+        Hero h = herois().get(0);
         h.setPowerStats(null);
         try {
          heroService.create(h);
@@ -43,9 +56,26 @@ public class HeroServiceTest {
         }catch (Exception e){}
     }
 
+    @Test
+    public void deveriaLancarErroCadastrarHero(){
 
-    private Hero hero(){
+
+        try{
+            Assertions.assertThrows(Exception.class, (Executable) heroService.create(Mockito.any()));
+            Assertions.fail();
+
+        }catch (Exception e){
+
+        }
+
+    }
+
+
+
+    private List<Hero> herois(){
+        List<Hero> herois = new ArrayList<>();
         Hero hero  = new Hero();
+        hero.setId(UUID.randomUUID());
         hero.setName("SuperMan");
         hero.setRace(RaceEnum.HUMAN);
 
@@ -56,7 +86,24 @@ public class HeroServiceTest {
         powerStats.setIntelligence((short)70);
 
         hero.setPowerStats(powerStats);
-        return hero;
+
+        herois.add(hero);
+
+        hero  = new Hero();
+        hero.setName("Spiderman");
+        hero.setRace(RaceEnum.HUMAN);
+
+        powerStats = new PowerStats();
+        powerStats.setStrength((short) 70);
+        powerStats.setAgility((short) 80);
+        powerStats.setDexterity((short) 90);
+        powerStats.setIntelligence((short)90);
+
+        hero.setPowerStats(powerStats);
+        herois.add(hero);
+
+        return herois;
     }
+
 
 }

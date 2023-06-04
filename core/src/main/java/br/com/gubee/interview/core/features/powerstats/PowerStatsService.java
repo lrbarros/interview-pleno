@@ -1,6 +1,7 @@
 package br.com.gubee.interview.core.features.powerstats;
 
 import br.com.gubee.interview.model.PowerStats;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -10,8 +11,10 @@ import org.springframework.web.client.HttpClientErrorException;
 
 
 @Service
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class PowerStatsService {
-    @Autowired private PowerStatsRepository powerStatsRepository;
+
+    private final PowerStatsRepository powerStatsRepository;
 
     public PowerStats save(PowerStats powerStats) {
         validatePowerStats(powerStats);

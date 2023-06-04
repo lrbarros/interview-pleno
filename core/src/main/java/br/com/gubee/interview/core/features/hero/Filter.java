@@ -9,6 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+/**
+ * <p>Justificativa da classe filter: Caso seja preciso inserir novos filtro ou uso de criteria em param fica bem blexivel e organizado<p/>
+ */
+
 public class Filter {
     private String name;
 }

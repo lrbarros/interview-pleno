@@ -43,7 +43,7 @@ public class HeroService {
             validateHero(hero);
             return heroRepository.save(hero);
         }
-        throw new DataIntegrityViolationException("One hero found with this name with id: "+hero.getId());
+        throw new DataIntegrityViolationException("One hero found with this name with id: "+heroDB.getId());
     }
 
     public Boolean delete(UUID id){
@@ -52,6 +52,11 @@ public class HeroService {
             return false;
         }
         heroRepository.delete(hero);
+        return true;
+    }
+    public Boolean deleteAll(){
+
+        heroRepository.deleteAll();
         return true;
     }
     public Hero update(Hero hero) {
