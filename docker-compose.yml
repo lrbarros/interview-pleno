@@ -1,0 +1,23 @@
+  version: '3'
+
+  services:
+    db:
+      image: postgres
+      volumes:
+        - ./core/src/main/resources/db/schema/init_schema.sql:/docker-entrypoint-initdb.d/init.sql
+      container_name: luiz-bd-interview
+      environment:
+        - POSTGRES_PASSWORD=postgres
+      network_mode: "host"
+      ports:
+        - "5432:5432"
+
+    app:
+      build:
+        dockerfile: ./Dockerfile
+        context: .
+      image: interview-api-luiz/api-luiz
+      container_name: luiz-api-interview
+      network_mode: "host"
+      ports:
+        - "8080:8080"
